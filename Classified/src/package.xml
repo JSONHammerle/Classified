@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Classified</fullName>
+    <description>Package for Classified</description>
+    <types>
+        <members>NewClassified</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Classified__c.Bluetooth__c</members>
+        <members>Classified__c.Color__c</members>
+        <members>Classified__c.Item_Description__c</members>
+        <members>Classified__c.Item_Price__c</members>
+        <members>Classified__c.Item_Type__c</members>
+        <members>Classified__c.Make__c</members>
+        <members>Classified__c.Model__c</members>
+        <members>Classified__c.Quantity_Available__c</members>
+        <members>Classified__c.Seller_Email__c</members>
+        <members>Classified__c.Seller_Phone_Number__c</members>
+        <members>Classified__c.Type__c</members>
+        <members>Classified__c.WiFi__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Classified__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Classified__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Classified__c-Classified Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Classified__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>33.0</version>
+</Package>

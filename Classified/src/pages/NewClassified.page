@@ -1,0 +1,35 @@
+<apex:page standardController="Classified__c" docType="html-5.0">
+      <apex:form >
+          <apex:pageBlock title="Enter Classified Information" id="classified">
+              <apex:pageBlockButtons location="top">
+                  <apex:commandButton value="Save" action="{!Save}"/>
+                  <apex:commandButton value="Cancel" action="{!Cancel}" immediate="true"/>                               
+              </apex:pageBlockButtons>
+              <apex:PageblockSection columns="2" >
+              <apex:inputField value="{!Classified__c.Name}" required="true"/>
+              <apex:inputField value="{!Classified__c.OwnerId}"/>
+              <apex:inputField value="{!Classified__c.Quantity_Available__c}"/>
+              <apex:inputField value="{!Classified__c.Seller_Phone_Number__c}"/>
+              <apex:inputField value="{!Classified__c.Item_Price__c}"/>
+              <apex:inputField value="{!Classified__c.Seller_Email__c}"/>
+              <apex:inputField value="{!Classified__c.Item_Description__c}"/>                                
+                  <apex:pageblockSectionItem >
+                      <apex:outputLabel value="Item Type" for="itemtype" />
+                      <apex:actionRegion >          
+                          <apex:inputField id="itemtype" value="{!Classified__c.Item_Type__c}" >
+                            <apex:actionSupport event="onchange" rerender="typedetails" />
+                          </apex:inputField>                        
+                      </apex:actionRegion>
+                  </apex:pageblockSectionItem>                 
+             </apex:pageBlockSection>
+             <apex:pageblockSection id="typedetails" rendered="true" columns="2" >
+                     <apex:inputField id="make" value="{!Classified__c.Make__c}" rendered="{!IF(Classified__c.Item_Type__c ='Auto',true,false)}"/>
+                     <apex:inputField id="model" value="{!Classified__c.Model__c}" rendered="{!IF(Classified__c.Item_Type__c ='Auto',true,false)}"/>            
+                     <apex:inputField id="color" value="{!Classified__c.Color__c}" rendered="{!IF(Classified__c.Item_Type__c ='Furniture',true,false)}"/>
+                     <apex:inputField id="bluetooth" value="{!Classified__c.Bluetooth__c}" rendered="{!IF(Classified__c.Item_Type__c ='Electronics',true,false)}"/>
+                     <apex:inputField id="wifi" value="{!Classified__c.WiFi__c}" rendered="{!IF(Classified__c.Item_Type__c ='Electronics',true,false)}"/>
+                     <apex:inputField id="type" value="{!Classified__c.Type__c}" rendered="{!IF(Classified__c.Item_Type__c ='Furniture'  || Classified__c.Item_Type__c ='Electronics'  || Classified__c.Item_Type__c ='Auto' ,true,false)}"/>
+                  </apex:pageblockSection>
+          </apex:pageBlock>
+      </apex:form>     
+</apex:page>
