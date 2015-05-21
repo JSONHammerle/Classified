@@ -7,6 +7,8 @@ for(User c : [SELECT Id, ClassifiedCounter__c FROM User WHERE (Id IN (Select Own
         {
           if(c.ClassifiedCounter__c != null)
               c.ClassifiedCounter__c = c.ClassifiedCounter__c + 1.0;
+          else
+              c.ClassifiedCounter__c = 1.0;
           userFieldUpdate.add(c);
          }
 
