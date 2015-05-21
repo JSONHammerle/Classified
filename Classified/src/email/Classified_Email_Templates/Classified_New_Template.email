@@ -1,0 +1,7 @@
+Dear {!Classified__c.OwnerFirstName},
+
+A new classified {!Classified__c.Name} has been successfully created.
+
+Sincerely,
+{!Classified__c.OwnerFullName}
+{!User.Email}

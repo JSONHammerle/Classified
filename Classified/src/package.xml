@@ -3,8 +3,19 @@
     <fullName>Classified</fullName>
     <description>Package for Classified</description>
     <types>
+        <members>ClassifiedExtension</members>
+        <members>ClassifiedExtension_Test</members>
+        <members>IncrementClassifiedCounter</members>
+        <members>IncrementClassifiedCounter_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
         <members>NewClassified</members>
         <name>ApexPage</name>
+    </types>
+    <types>
+        <members>IncrementClassifiedCounter</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
         <members>Classified__c.Bluetooth__c</members>
@@ -19,6 +30,7 @@
         <members>Classified__c.Seller_Phone_Number__c</members>
         <members>Classified__c.Type__c</members>
         <members>Classified__c.WiFi__c</members>
+        <members>User.ClassifiedCounter__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -30,12 +42,29 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Classified_Email_Templates</members>
+        <members>Classified_Email_Templates/Classified_New_Template</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
         <members>Classified__c-Classified Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>Classified__c.All</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>Classified__c.Zero_Quantity_Rule</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Classified__c.Classified_Notification</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Classified__c.Classified%3A New Alert</members>
+        <name>WorkflowRule</name>
     </types>
     <version>33.0</version>
 </Package>

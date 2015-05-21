@@ -324,4 +324,12 @@
     <pluralLabel>Classifieds</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Zero_Quantity_Rule</fullName>
+        <active>true</active>
+        <description>Quantity Available must be specified and the value must be greater than zero.</description>
+        <errorConditionFormula>ISBLANK( Quantity_Available__c ) || ( Quantity_Available__c  &lt;= 0)</errorConditionFormula>
+        <errorDisplayField>Quantity_Available__c</errorDisplayField>
+        <errorMessage>Quantity Available must be specified and the value must be greater than zero.</errorMessage>
+    </validationRules>
 </CustomObject>
