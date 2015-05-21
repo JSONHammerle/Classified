@@ -22,7 +22,7 @@ private class IncrementClassifiedCounter_Test {
         System.debug('After inserting classified: ' + myUser1.ClassifiedCounter__c);
         
         counter = counter + 1;
-        // Test that the trigger correctly updated the price
+        // Test that the trigger correctly updated the classified counter
         System.assertEquals(counter, myUser1.ClassifiedCounter__c);
                
         Classified__c classified2 = new Classified__c(Name='Increment classified counter again');
@@ -35,7 +35,8 @@ private class IncrementClassifiedCounter_Test {
         myUser2 = [ SELECT ClassifiedCounter__c FROM User WHERE id = :userId2];
         System.debug('After inserting classified again: ' + myUser2.ClassifiedCounter__c);
         
-        counter = counter + 1;        
+        counter = counter + 1;
+        // Test that the trigger correctly updated the classified counter       
         System.assertEquals(counter, myUser2.ClassifiedCounter__c);
    }
 }
